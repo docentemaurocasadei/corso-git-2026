@@ -57,8 +57,6 @@ node_modules/
 *.log
 
 
-Verifica:
-
 git status
 
 Soluzione 14 – Remoto
