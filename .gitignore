@@ -1,2 +1,3 @@
-./test/reserved1.txt
-./test/reserved2.txt
+test/reserved1.txt
+#test/reserved2.txt
+#test/reserved3.txt
