@@ -1,0 +1,86 @@
+SOLUZIONI — ESERCIZIO GIT
+INIT / ADD / COMMIT
+
+--------------------------------------------------
+SCENARIO INIZIALE
+
+Comando:
+git init
+
+Spiegazione:
+- inizializza un repository Git locale
+- crea la cartella .git
+- non esiste ancora alcuna commit
+- HEAD non è ancora definito
+
+Per verificare lo stato:
+git status
+
+--------------------------------------------------
+PARTE 1 — WORKING DIRECTORY
+
+Dopo la creazione di index.html:
+- il file si trova nella WORKING DIRECTORY
+- Git lo segnala come "untracked"
+
+--------------------------------------------------
+PARTE 2 — STAGING AREA
+
+Comando:
+git add index.html
+
+Effetto:
+- il file passa dalla Working Directory allo Stage
+- è pronto per essere incluso in una commit
+
+--------------------------------------------------
+PARTE 3 — COMMIT
+
+Comando:
+git commit -m "prima versione index"
+
+Effetto:
+- viene creata una commit
+- Git salva una fotografia dello stato del progetto
+- HEAD punta alla nuova commit
+
+Per vedere la cronologia:
+git log --oneline
+
+--------------------------------------------------
+PARTE 4 — NUOVA COMMIT
+
+Dopo la modifica del file:
+- il file torna nella Working Directory come "modified"
+
+Comandi:
+git add index.html
+git commit -m "seconda versione index"
+
+Effetto:
+- viene creata una nuova commit
+- la storia Git avanza
+
+--------------------------------------------------
+PARTE 5 — COMMIT PARZIALE
+
+Se NON viene aggiunto allo stage:
+- la modifica resta nella Working Directory
+- NON viene inclusa nella commit successiva
+
+--------------------------------------------------
+RIEPILOGO FINALE
+
+Azione                         | Comando
+-------------------------------|----------------
+Inizializzare un repository    | git init
+Aggiungere file allo stage     | git add
+Salvare una versione           | git commit
+Vedere lo stato                | git status
+Vedere la cronologia           | git log
+
+--------------------------------------------------
+REGOLA CHIAVE
+
+Git NON committa i file.
+Git committa SOLO ciò che si trova nello STAGE.

@@ -1,0 +1,71 @@
+SOLUZIONI — ESERCIZIO GIT
+STATO LOCALE VS STATO REMOTO
+
+--------------------------------------------------
+PARTE 1 — MODIFICA SOLO LOCALE
+
+La commit si trova:
+- SOLO nel repository locale
+- non è ancora presente sul remoto
+
+--------------------------------------------------
+PARTE 2 — LOCALE AVANTI
+
+Comando di confronto:
+git log origin/main..HEAD
+(o origin/master..HEAD)
+
+Significato:
+- il branch locale contiene commit
+- che il remoto non ha ancora
+
+--------------------------------------------------
+PARTE 3 — MODIFICA SOLO REMOTA
+
+Aggiornamento informazioni:
+git fetch
+
+Effetto:
+- vengono aggiornati i riferimenti remoti
+- i file locali NON cambiano
+- il branch locale resta invariato
+
+--------------------------------------------------
+PARTE 4 — LOCALE INDIETRO
+
+Comando di confronto:
+git log HEAD..origin/main
+(o HEAD..origin/master)
+
+Significato:
+- il remoto contiene commit
+- che il locale non ha ancora
+
+--------------------------------------------------
+PARTE 5 — REPOSITORY SINCRONIZZATO
+
+Comando:
+git pull
+(oppure fetch + merge)
+
+Risultato:
+- branch locale e remoto puntano
+  allo stesso commit
+- nessuna differenza tra i due
+
+--------------------------------------------------
+RIEPILOGO FINALE
+
+Situazione                          | Significato
+-----------------------------------|------------------------------
+Commit solo in locale               | non ancora pushata
+Commit solo sul remoto              | non ancora scaricata
+Locale avanti                       | più commit del remoto
+Locale indietro                     | meno commit del remoto
+Repository sincronizzato            | stessa storia Git
+
+--------------------------------------------------
+REGOLA CHIAVE (QUESTA È ORO)
+
+Locale e remoto sono DUE STORIE.
+Git non le unisce finché non glielo chiedi.

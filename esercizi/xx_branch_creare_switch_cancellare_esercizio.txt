@@ -1,0 +1,84 @@
+ESERCIZIO PRATICO — GIT
+BRANCH
+CREARE / SWITCH / CANCELLARE
+
+--------------------------------------------------
+OBIETTIVO
+
+Capire come funzionano i branch in Git:
+- creazione di un branch
+- cambio di branch
+- lavoro su branch separati
+- cancellazione di branch non più necessari
+
+--------------------------------------------------
+SCENARIO INIZIALE
+
+1) Parti da un repository Git già inizializzato
+con almeno una commit esistente.
+
+2) Verifica di trovarti sul branch principale
+(main o master).
+
+--------------------------------------------------
+PARTE 1 — CREAZIONE DI UN BRANCH
+
+3) Crea un nuovo branch chiamato:
+feature-login
+
+4) Verifica che il branch sia stato creato.
+
+DOMANDA:
+Dopo la creazione, su quale branch ti trovi?
+
+--------------------------------------------------
+PARTE 2 — SWITCH DI BRANCH
+
+5) Spostati sul branch feature-login.
+
+6) Verifica il branch attualmente attivo.
+
+DOMANDA:
+Cosa indica il branch attivo in Git?
+
+--------------------------------------------------
+PARTE 3 — LAVORO SU BRANCH SEPARATO
+
+7) Modifica un file a tua scelta nel progetto.
+
+8) Salva le modifiche in una commit
+mentre ti trovi su feature-login.
+
+DOMANDA:
+Questa commit è visibile anche sul branch principale?
+
+--------------------------------------------------
+PARTE 4 — RITORNO AL BRANCH PRINCIPALE
+
+9) Torna sul branch principale.
+
+10) Controlla i file modificati in precedenza.
+
+DOMANDA:
+Perché le modifiche non sono presenti?
+
+--------------------------------------------------
+PARTE 5 — CANCELLARE UN BRANCH
+
+11) Elimina il branch feature-login
+dopo aver terminato il lavoro.
+
+DOMANDA:
+È possibile cancellare un branch
+mentre ci si trova sopra? Perché?
+
+--------------------------------------------------
+RIEPILOGO FINALE
+
+Completa:
+
+- Creare un branch → __________
+- Cambiare branch → __________
+- Vedere i branch → __________
+- Cancellare un branch → __________
+- Branch serve per → __________________________

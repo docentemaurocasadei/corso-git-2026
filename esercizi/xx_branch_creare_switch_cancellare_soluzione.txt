@@ -1,0 +1,77 @@
+SOLUZIONI — ESERCIZIO GIT
+BRANCH — CREARE / SWITCH / CANCELLARE
+
+--------------------------------------------------
+PARTE 1 — CREAZIONE DI UN BRANCH
+
+Comando corretto:
+git branch feature-login
+
+Dopo la creazione:
+- il branch viene creato
+- NON si cambia automaticamente branch
+
+--------------------------------------------------
+PARTE 2 — SWITCH DI BRANCH
+
+Comando corretto:
+git switch feature-login
+
+Oppure (versione più vecchia):
+git checkout feature-login
+
+Il branch attivo indica:
+- su quale linea di sviluppo stai lavorando
+- dove verranno create le nuove commit
+
+--------------------------------------------------
+PARTE 3 — LAVORO SU BRANCH SEPARATO
+
+Comandi:
+git add <file>
+git commit -m "lavoro su feature-login"
+
+Spiegazione:
+- la commit appartiene SOLO al branch feature-login
+- il branch principale non viene modificato
+
+--------------------------------------------------
+PARTE 4 — RITORNO AL BRANCH PRINCIPALE
+
+Comando:
+git switch main   (oppure master)
+
+Motivo:
+- ogni branch ha la propria storia
+- le modifiche non mergiate non sono visibili
+
+--------------------------------------------------
+PARTE 5 — CANCELLARE UN BRANCH
+
+Comando corretto:
+git branch -d feature-login
+
+Regola importante:
+- NON puoi cancellare il branch su cui ti trovi
+- devi prima spostarti su un altro branch
+
+(Forzare la cancellazione:
+git branch -D feature-login
+→ usare con cautela)
+
+--------------------------------------------------
+RIEPILOGO FINALE
+
+Azione                    | Comando
+--------------------------|-------------------------
+Creare un branch          | git branch
+Cambiare branch           | git switch
+Vedere i branch           | git branch
+Cancellare un branch      | git branch -d
+Branch serve per          | lavorare su funzionalità isolate
+
+--------------------------------------------------
+REGOLA DIDATTICA
+
+Un branch è un puntatore.
+Cambiare branch significa cambiare linea di lavoro.

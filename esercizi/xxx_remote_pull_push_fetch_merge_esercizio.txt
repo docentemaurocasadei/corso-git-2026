@@ -1,0 +1,93 @@
+ESERCIZIO PRATICO — GIT
+REMOTE / PUSH / FETCH / PULL / MERGE
+LOCALE VS REMOTO
+
+--------------------------------------------------
+OBIETTIVO
+
+Capire:
+- cos’è un repository remoto
+- differenza tra push, fetch e pull
+- come sincronizzare repository locale e remoto
+- come unire modifiche provenienti dal remoto
+
+--------------------------------------------------
+SCENARIO INIZIALE
+
+1) Parti da un repository Git locale già inizializzato
+con almeno una commit esistente.
+
+2) Crea un repository remoto (GitHub o simile),
+inizialmente vuoto.
+
+3) Collega il repository locale a quello remoto.
+
+--------------------------------------------------
+PARTE 1 — PRIMO INVIO AL REMOTO (PUSH)
+
+4) Invia la storia locale al repository remoto
+per la prima volta.
+
+5) Verifica che il repository remoto
+contenga ora le commit locali.
+
+DOMANDA:
+Cosa succede se il repository remoto era vuoto?
+
+--------------------------------------------------
+PARTE 2 — MODIFICA LOCALE E PUSH
+
+6) Effettua una nuova modifica in locale
+e salvala in una commit.
+
+7) Invia la nuova commit al repository remoto.
+
+DOMANDA:
+Cosa succede al remoto dopo questa operazione?
+
+--------------------------------------------------
+PARTE 3 — MODIFICA SUL REMOTO
+
+8) Simula una modifica fatta da un altro sviluppatore
+direttamente sul repository remoto
+(es. modifica di un file tramite GitHub).
+
+9) Senza modificare i file locali,
+aggiorna le informazioni sullo stato del remoto.
+
+DOMANDA:
+Dopo questa operazione, i file locali cambiano?
+
+--------------------------------------------------
+PARTE 4 — FETCH VS PULL
+
+10) Porta le modifiche dal remoto al repository locale
+SENZA unirle automaticamente al branch locale.
+
+11) Controlla la differenza tra branch locale
+e branch remoto.
+
+DOMANDA:
+Qual è la differenza tra fetch e pull?
+
+--------------------------------------------------
+PARTE 5 — MERGE DELLE MODIFICHE
+
+12) Unisci manualmente le modifiche provenienti
+dal branch remoto al branch locale.
+
+13) Verifica la cronologia delle commit.
+
+DOMANDA:
+Perché questa operazione può creare conflitti?
+
+--------------------------------------------------
+RIEPILOGO FINALE
+
+Completa:
+
+- Inviare commit al remoto → __________
+- Scaricare info dal remoto → __________
+- Scaricare e unire → __________
+- Unire due branch → __________
+- Fetch modifica i file locali? → __________

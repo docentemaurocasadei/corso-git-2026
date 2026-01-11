@@ -1,0 +1,70 @@
+SOLUZIONI — ESERCIZIO GIT
+STASH
+
+--------------------------------------------------
+PARTE 1 — MODIFICHE NON COMMITTATE
+
+Le modifiche si trovano:
+- nella WORKING DIRECTORY
+- oppure nello STAGING AREA (se aggiunte allo stage)
+
+--------------------------------------------------
+PARTE 2 — ESIGENZA DI PULIZIA
+
+Strumento corretto:
+git stash
+
+Motivo:
+- permette di salvare temporaneamente le modifiche
+- senza creare una commit
+- senza sporcare la storia Git
+
+--------------------------------------------------
+PARTE 3 — WORKING DIRECTORY PULITA
+
+Comando usato:
+git stash
+
+Effetto:
+- le modifiche vengono salvate in uno stash
+- la working directory torna pulita
+- il repository torna allo stato dell’ultima commit
+
+--------------------------------------------------
+PARTE 4 — RECUPERO DELLE MODIFICHE
+
+Comando corretto:
+git stash pop
+
+Effetto:
+- le modifiche vengono ripristinate
+- lo stash viene rimosso
+- le modifiche tornano nella working directory
+
+(In alternativa: git stash apply
+→ ripristina ma NON rimuove lo stash)
+
+--------------------------------------------------
+PARTE 5 — COMPRENSIONE DELLO STASH
+
+Stash:
+- salva temporaneamente modifiche non committate
+- NON crea commit
+- NON modifica la cronologia
+- NON sostituisce una commit
+
+--------------------------------------------------
+RIEPILOGO FINALE
+
+Risposte corrette:
+
+- Stash serve per → mettere da parte modifiche temporanee
+- Stash lavora su → working directory e stage
+- Le modifiche stashed vengono → salvate e rimosse temporaneamente
+- Stash sostituisce una commit? → NO
+
+--------------------------------------------------
+REGOLA CHIAVE
+
+Stash NON è una commit.
+Stash è un parcheggio temporaneo per le modifiche.

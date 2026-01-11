@@ -1,0 +1,60 @@
+SOLUZIONI — ESERCIZIO GIT
+.GITIGNORE
+
+--------------------------------------------------
+PARTE 1 — FILE NON TRACCIATI
+
+Git segnala i file perché:
+- sono nuovi
+- non sono ancora versionati
+- Git, per default, mostra tutti i file non tracciati
+
+--------------------------------------------------
+PARTE 2 — CREAZIONE DI .GITIGNORE
+
+Esempio di contenuto corretto di .gitignore:
+
+*.log
+config.local
+temp/
+node_modules/
+
+Effetto:
+- i file indicati NON vengono più mostrati da git status
+- Git li ignora completamente
+- non verranno mai inclusi in una commit
+
+--------------------------------------------------
+PARTE 3 — FILE GIÀ TRACCIATO
+
+Motivo:
+.gitignore NON ha effetto sui file
+che sono già tracciati da Git.
+
+Git continua a versionare segreto.txt
+perché fa già parte della storia.
+
+--------------------------------------------------
+PARTE 4 — COME SMETTERE DI TRACCIARE UN FILE
+
+Comando corretto:
+git rm --cached segreto.txt
+
+Poi:
+git commit -m "rimosso file dalla versione, ora ignorato"
+
+--------------------------------------------------
+RIEPILOGO FINALE
+
+Risposta corretta:
+
+- Scopo di .gitignore → evitare di versionare file inutili o sensibili
+- File ignorati da Git → file non tracciati che rispettano le regole
+- .gitignore agisce su file → non ancora versionati
+- Per smettere di tracciare un file già versionato → rimuoverlo dall’index
+
+--------------------------------------------------
+REGOLA CHIAVE
+
+.gitignore NON cancella file.
+.gitignore dice a Git cosa NON deve tracciare.

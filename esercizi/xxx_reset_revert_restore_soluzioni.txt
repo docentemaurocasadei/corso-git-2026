@@ -1,0 +1,66 @@
+SOLUZIONI — ESERCIZIO GIT
+RESET / REVERT / RESTORE
+
+--------------------------------------------------
+PARTE 1 — ERRORE LOCALE
+
+Comando corretto:
+git reset --soft HEAD~1
+
+Motivo:
+- commit non ancora pushata
+- reset è sicuro in locale
+- le modifiche restano disponibili
+
+--------------------------------------------------
+PARTE 2 — RECUPERO FILE
+
+Comando corretto:
+git restore contatti.html
+
+Motivo:
+- ripristina il file all’ultima commit
+- non modifica la cronologia
+
+--------------------------------------------------
+PARTE 3 — ERRORE PUBBLICATO
+
+DOMANDA:
+Posso usare git reset?
+RISPOSTA:
+NO. Il commit è già sul remoto e reset
+riscriverebbe la storia condivisa.
+
+Comando corretto:
+git revert HEAD
+
+Motivo:
+- revert crea una nuova commit
+- la storia Git resta intatta
+- comando sicuro su branch condivisi
+
+--------------------------------------------------
+PARTE 4 — LOCALE VS REMOTO
+
+git log origin/master..HEAD
+→ commit presenti solo in locale
+
+git log HEAD..origin/master
+→ commit presenti solo sul remoto
+
+--------------------------------------------------
+RIEPILOGO FINALE
+
+Situazione                     | Comando
+----------------------------------------
+Commit non pushata              | git reset
+Commit già pushata              | git revert
+Recuperare un file              | git restore
+Distruggere tutto               | git reset --hard
+
+--------------------------------------------------
+REGOLA D’ORO
+
+Reset riscrive la storia.
+Revert la corregge.
+Restore recupera i file.

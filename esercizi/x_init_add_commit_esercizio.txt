@@ -1,0 +1,105 @@
+ESERCIZIO PRATICO — GIT
+INIT / ADD / COMMIT
+WORKING DIRECTORY / STAGE / REPOSITORY
+
+--------------------------------------------------
+OBIETTIVO
+
+Capire il flusso base di Git:
+- inizializzazione di un repository
+- passaggio Working Directory → Stage
+- creazione delle commit
+- lettura dello stato del repository
+
+--------------------------------------------------
+SCENARIO INIZIALE
+
+1) Crea una nuova cartella vuota sul tuo computer.
+
+2) Entra nella cartella e inizializza Git:
+git init
+
+3) Verifica lo stato:
+git status
+
+DOMANDA:
+Perché Git segnala che non esistono ancora commit?
+
+--------------------------------------------------
+PARTE 1 — WORKING DIRECTORY
+
+4) Crea un file index.html con questo contenuto minimo:
+<html>
+<body>
+    home
+</body>
+</html>
+
+5) Controlla lo stato:
+git status
+
+DOMANDA:
+In quale ambiente si trova ora il file index.html?
+
+--------------------------------------------------
+PARTE 2 — STAGING AREA (ADD)
+
+6) Aggiungi il file allo stage:
+git add index.html
+
+7) Controlla di nuovo lo stato:
+git status
+
+DOMANDA:
+In quale ambiente si trova ora il file?
+
+--------------------------------------------------
+PARTE 3 — COMMIT
+
+8) Crea la prima commit:
+git commit -m "prima versione index"
+
+9) Verifica la cronologia:
+git log --oneline
+
+DOMANDA:
+Cosa rappresenta una commit in Git?
+
+--------------------------------------------------
+PARTE 4 — MODIFICA E NUOVA COMMIT
+
+10) Modifica index.html aggiungendo:
+<p>seconda versione</p>
+
+11) Controlla lo stato:
+git status
+
+12) Aggiungi le modifiche allo stage e crea una nuova commit:
+git add index.html
+git commit -m "seconda versione index"
+
+13) Verifica la cronologia:
+git log --oneline
+
+--------------------------------------------------
+PARTE 5 — COMMIT PARZIALE
+
+14) Modifica index.html aggiungendo un'altra riga:
+<p>modifica non pronta</p>
+
+15) Controlla lo stato:
+git status
+
+DOMANDA:
+Se non esegui git add, cosa succede alla modifica?
+
+--------------------------------------------------
+RIEPILOGO FINALE
+
+Completa:
+
+- Inizializzare un repository → __________
+- Aggiungere file allo stage → __________
+- Salvare una versione → __________
+- Vedere lo stato → __________
+- Vedere la cronologia → __________

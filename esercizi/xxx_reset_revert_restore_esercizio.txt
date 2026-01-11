@@ -1,0 +1,106 @@
+ESERCIZIO PRATICO — GIT
+RESET / REVERT / RESTORE
+LOCALE VS REMOTO
+
+--------------------------------------------------
+OBIETTIVO
+
+Imparare quando e come usare:
+- git reset
+- git revert
+- git restore
+capendo la differenza tra repository locale e remoto.
+
+--------------------------------------------------
+SCENARIO INIZIALE (REPOSITORY PERSONALE)
+
+1) Crea un NUOVO repository su GitHub:
+- nome a scelta
+- SENZA README
+- SENZA .gitignore
+- SENZA license
+
+2) In una cartella locale, inizializza Git:
+git init
+
+3) Crea un file contatti.html con contenuto minimo:
+<html>
+<body>
+    contatti
+</body>
+</html>
+
+4) Prima commit:
+git add contatti.html
+git commit -m "prima versione"
+
+5) Collega il repository remoto:
+git remote add origin URL_DEL_TUO_REPO
+
+6) Primo push:
+git push -u origin master
+(oppure main)
+
+--------------------------------------------------
+PARTE 1 — ERRORE LOCALE (RESET)
+
+7) Modifica contatti.html aggiungendo:
+<p>Errore locale</p>
+
+8) Commit (NON pushato):
+git add contatti.html
+git commit -m "errore locale"
+
+DOMANDA:
+La commit non è sul remoto.
+Qual è il comando corretto per annullarla
+mantenendo le modifiche?
+
+AZIONE:
+Annulla l’ultima commit mantenendo i file.
+
+--------------------------------------------------
+PARTE 2 — RECUPERO FILE (RESTORE)
+
+9) Annulla le modifiche al file contatti.html
+usando il comando corretto.
+
+Verifica:
+git status
+
+--------------------------------------------------
+PARTE 3 — ERRORE PUBBLICATO (REVERT)
+
+10) Modifica di nuovo contatti.html (testo libero).
+
+11) Commit + push:
+git add contatti.html
+git commit -m "errore pubblicato"
+git push
+
+DOMANDA:
+Il commit è già sul remoto.
+Posso usare git reset? Perché?
+
+AZIONE:
+Annulla il commit senza riscrivere la storia.
+
+--------------------------------------------------
+PARTE 4 — LOCALE VS REMOTO
+
+12) Confronta locale e remoto:
+git log origin/master..HEAD
+git log HEAD..origin/master
+
+DOMANDA:
+Cosa indica ciascun comando?
+
+--------------------------------------------------
+RIEPILOGO FINALE
+
+Completa:
+
+- Commit non pushata  → __________
+- Commit già pushata  → __________
+- Recuperare un file  → __________
+- Distruggere tutto   → __________

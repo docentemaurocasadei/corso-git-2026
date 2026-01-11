@@ -1,0 +1,82 @@
+ESERCIZIO PRATICO — GIT
+STASH
+GESTIONE MODIFICHE TEMPORANEE
+
+--------------------------------------------------
+OBIETTIVO
+
+Capire:
+- a cosa serve git stash
+- quando usarlo
+- cosa succede alle modifiche non committate
+- come recuperare le modifiche messe da parte
+
+--------------------------------------------------
+SCENARIO INIZIALE
+
+1) Parti da un repository Git già inizializzato
+con almeno una commit esistente.
+
+2) Verifica che il repository sia pulito
+(non ci sono modifiche pendenti).
+
+--------------------------------------------------
+PARTE 1 — MODIFICHE NON COMMITTATE
+
+3) Modifica un file a tua scelta nel progetto
+(es. index.html o app.txt).
+
+4) Controlla lo stato del repository.
+
+DOMANDA:
+In quale ambiente si trovano ora le modifiche?
+
+--------------------------------------------------
+PARTE 2 — ESIGENZA DI PULIZIA
+
+5) Immagina di dover:
+- cambiare branch
+- oppure risolvere un problema urgente
+senza perdere le modifiche attuali.
+
+DOMANDA:
+Quale strumento Git permette di mettere da parte
+temporaneamente le modifiche non committate?
+
+--------------------------------------------------
+PARTE 3 — WORKING DIRECTORY PULITA
+
+6) Metti da parte le modifiche correnti
+senza creare alcuna commit.
+
+7) Controlla lo stato del repository.
+
+DOMANDA:
+Cosa è successo alla working directory?
+
+--------------------------------------------------
+PARTE 4 — RECUPERO DELLE MODIFICHE
+
+8) Ripristina le modifiche precedentemente messe da parte.
+
+9) Controlla lo stato del repository.
+
+DOMANDA:
+Dove si trovano ora le modifiche recuperate?
+
+--------------------------------------------------
+PARTE 5 — COMPRENSIONE DELLO STASH
+
+10) Spiega con parole tue:
+- cosa fa stash
+- cosa NON fa stash
+
+--------------------------------------------------
+RIEPILOGO FINALE
+
+Completa:
+
+- Stash serve per → __________________________
+- Stash lavora su → __________________________
+- Le modifiche stashed vengono → _____________
+- Stash sostituisce una commit? → ____________

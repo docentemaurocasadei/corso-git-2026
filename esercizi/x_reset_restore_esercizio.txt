@@ -1,0 +1,85 @@
+ESERCIZIO PRATICO — GIT
+RESET / RESTORE
+WORKING DIRECTORY / STAGE / REPOSITORY
+
+--------------------------------------------------
+OBIETTIVO
+
+Capire quando e come usare:
+- reset
+- restore
+per annullare modifiche e commit LOCALI,
+distinguendo tra:
+- working directory
+- staging area
+- repository
+
+--------------------------------------------------
+SCENARIO INIZIALE
+
+1) Crea una nuova cartella e inizializza un repository Git.
+
+2) Crea un file app.txt con contenuto:
+versione 1
+
+3) Salva la prima versione del file in Git.
+
+4) Verifica che il repository sia pulito
+e che esista una sola commit.
+
+--------------------------------------------------
+PARTE 1 — ANNULLARE UNA COMMIT LOCALE
+
+5) Modifica app.txt aggiungendo:
+versione 2
+
+6) Salva la modifica in una nuova commit
+(SENZA inviarla su alcun repository remoto).
+
+DOMANDA:
+La commit non è ancora pubblicata.
+Quale operazione permette di annullarla
+mantenendo le modifiche nel progetto?
+
+AZIONE:
+Annulla l’ultima commit mantenendo il contenuto del file.
+
+--------------------------------------------------
+PARTE 2 — DOVE SI TROVANO LE MODIFICHE
+
+7) Osserva lo stato del repository.
+
+DOMANDA:
+Dopo l’operazione precedente, le modifiche
+si trovano nello stage o nella working directory?
+
+--------------------------------------------------
+PARTE 3 — RIPRISTINARE UN FILE
+
+8) Annulla le modifiche presenti nel file app.txt
+e riportalo allo stato dell’ultima commit.
+
+9) Verifica che il file sia tornato alla versione precedente
+e che il repository sia pulito.
+
+--------------------------------------------------
+PARTE 4 — ANNULLARE SOLO LO STAGE
+
+10) Modifica di nuovo app.txt:
+versione 3
+
+11) Porta il file nello stage.
+
+DOMANDA:
+Quale operazione permette di rimuovere il file dallo stage
+senza perdere la modifica nel file?
+
+--------------------------------------------------
+RIEPILOGO FINALE
+
+Completa:
+
+- Annullare una commit locale mantenendo i file → __________
+- Rimuovere un file dallo stage → __________
+- Ripristinare un file all’ultima commit → __________
+- Operazione che distrugge tutto → __________

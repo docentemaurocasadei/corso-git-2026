@@ -1,0 +1,80 @@
+SOLUZIONI — ESERCIZIO GIT
+ADD / COMMIT / STATUS / LOG
+
+--------------------------------------------------
+PARTE 1 — FILE NON TRACCIATO
+
+Git segnala note.txt come:
+- file non tracciato (untracked)
+- non ancora incluso nel versioning
+
+--------------------------------------------------
+PARTE 2 — FILE MODIFICATO
+
+Differenza:
+- file nuovo → non tracciato
+- file modificato → già versionato ma cambiato
+
+Git li segnala in sezioni diverse dello stato.
+
+--------------------------------------------------
+PARTE 3 — PREPARARE UNA COMMIT
+
+Comando corretto:
+git add <file_modificato>
+
+Effetto:
+- solo il file selezionato passa allo stage
+- note.txt resta non tracciato
+
+--------------------------------------------------
+PARTE 4 — CREAZIONE DELLA COMMIT
+
+Comando corretto:
+git commit -m "messaggio"
+
+Motivo:
+- solo i file nello stage vengono salvati
+- note.txt non è nello stage
+- il repository NON è ancora pulito
+
+--------------------------------------------------
+PARTE 5 — LETTURA DELLA CRONOLOGIA
+
+Comando corretto:
+git log --oneline
+
+Ogni riga rappresenta:
+- una commit
+- con hash abbreviato
+- messaggio descrittivo
+- ordine cronologico inverso
+
+--------------------------------------------------
+PARTE 6 — ANALISI DI UNA COMMIT
+
+Comando corretto:
+git show HEAD
+
+Informazioni principali:
+- autore
+- data
+- messaggio
+- modifiche introdotte (diff)
+
+--------------------------------------------------
+RIEPILOGO FINALE
+
+Azione                              | Comando
+-----------------------------------|-------------------------
+Vedere lo stato                     | git status
+Preparare una commit                | git add
+Salvare una versione                | git commit
+Vedere la cronologia                | git log
+Vedere il contenuto di una commit   | git show
+
+--------------------------------------------------
+REGOLA DIDATTICA
+
+Git mostra SEMPRE la verità.
+Sta allo sviluppatore saperla leggere.

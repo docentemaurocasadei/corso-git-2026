@@ -1,0 +1,81 @@
+ESERCIZIO PRATICO — GIT
+.GITIGNORE
+GESTIONE FILE NON TRACCIATI
+
+--------------------------------------------------
+OBIETTIVO
+
+Capire:
+- a cosa serve il file .gitignore
+- quali file NON devono essere versionati
+- la differenza tra file tracciati e non tracciati
+- quando .gitignore funziona e quando no
+
+--------------------------------------------------
+SCENARIO INIZIALE
+
+1) Parti da un repository Git locale già inizializzato.
+
+2) Verifica che il repository sia pulito
+(non ci sono modifiche pendenti).
+
+--------------------------------------------------
+PARTE 1 — FILE NON TRACCIATI
+
+3) Crea i seguenti file e cartelle:
+- debug.log
+- config.local
+- cartella temp/
+- cartella node_modules/
+
+4) Controlla lo stato del repository.
+
+DOMANDA:
+Perché Git segnala questi file e cartelle?
+
+--------------------------------------------------
+PARTE 2 — CREAZIONE DI .GITIGNORE
+
+5) Crea un file chiamato .gitignore
+nella root del progetto.
+
+6) Inserisci nel file le regole necessarie
+per ignorare:
+- file .log
+- file config.local
+- cartella temp
+- cartella node_modules
+
+7) Controlla di nuovo lo stato del repository.
+
+DOMANDA:
+Cosa è cambiato rispetto a prima?
+
+--------------------------------------------------
+PARTE 3 — FILE GIÀ TRACCIATO
+
+8) Crea un file segreto.txt
+e salvalo in una commit.
+
+9) Aggiungi ora segreto.txt al file .gitignore.
+
+10) Controlla lo stato del repository.
+
+DOMANDA:
+Perché Git continua a tracciare segreto.txt?
+
+--------------------------------------------------
+PARTE 4 — COMPRENSIONE DEL COMPORTAMENTO
+
+11) Spiega con parole tue:
+Quando .gitignore NON ha effetto?
+
+--------------------------------------------------
+RIEPILOGO FINALE
+
+Completa:
+
+- Scopo di .gitignore → ______________________
+- File ignorati da Git → ______________________
+- .gitignore agisce su file → __________________
+- Per smettere di tracciare un file già versionato → __________________

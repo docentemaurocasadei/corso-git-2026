@@ -1,0 +1,92 @@
+ESERCIZIO PRATICO — GIT
+ADD / COMMIT / STATUS / LOG
+LEGGERE E INTERPRETARE LO STATO DI GIT
+
+--------------------------------------------------
+OBIETTIVO
+
+Imparare a:
+- capire lo stato del repository
+- distinguere file tracciati e non tracciati
+- leggere correttamente lo stato prima di una commit
+- interpretare la cronologia delle commit
+
+--------------------------------------------------
+SCENARIO INIZIALE
+
+1) Parti da un repository Git già inizializzato
+con almeno una commit esistente.
+
+2) Verifica che il repository sia pulito
+(non ci sono modifiche pendenti).
+
+--------------------------------------------------
+PARTE 1 — FILE NON TRACCIATO
+
+3) Crea un nuovo file chiamato note.txt
+con un contenuto a tua scelta.
+
+4) Controlla lo stato del repository.
+
+DOMANDA:
+Come viene segnalato il file note.txt da Git?
+
+--------------------------------------------------
+PARTE 2 — FILE MODIFICATO
+
+5) Modifica un file già esistente nel progetto.
+
+6) Controlla di nuovo lo stato del repository.
+
+DOMANDA:
+Qual è la differenza tra il file nuovo
+e il file modificato nello stato di Git?
+
+--------------------------------------------------
+PARTE 3 — PREPARARE UNA COMMIT
+
+7) Prepara SOLO il file modificato
+per essere incluso nella prossima commit.
+
+8) Controlla lo stato del repository.
+
+DOMANDA:
+Cosa succede al file note.txt?
+
+--------------------------------------------------
+PARTE 4 — CREAZIONE DELLA COMMIT
+
+9) Salva le modifiche preparate creando una commit.
+
+10) Controlla lo stato del repository.
+
+DOMANDA:
+Perché il repository non è ancora completamente pulito?
+
+--------------------------------------------------
+PARTE 5 — LETTURA DELLA CRONOLOGIA
+
+11) Visualizza la cronologia delle commit
+in forma compatta.
+
+DOMANDA:
+Cosa rappresenta ogni riga della cronologia?
+
+--------------------------------------------------
+PARTE 6 — ANALISI DI UNA COMMIT
+
+12) Osserva l’ultima commit effettuata.
+
+DOMANDA:
+Quali informazioni principali contiene una commit?
+
+--------------------------------------------------
+RIEPILOGO FINALE
+
+Completa:
+
+- Comando per vedere lo stato → __________
+- Comando per preparare una commit → __________
+- Comando per salvare una versione → __________
+- Comando per vedere la cronologia → __________
+- Comando per vedere il contenuto di una commit → __________

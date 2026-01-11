@@ -1,0 +1,89 @@
+ESERCIZIO PRATICO — GIT
+STATO LOCALE VS STATO REMOTO
+CAPIRE DOVE SI TROVA IL CODICE
+
+--------------------------------------------------
+OBIETTIVO
+
+Capire:
+- cosa rappresenta lo stato locale
+- cosa rappresenta lo stato remoto
+- quando un repository è sincronizzato
+- come interpretare le differenze tra locale e remoto
+
+--------------------------------------------------
+SCENARIO INIZIALE
+
+1) Parti da un repository Git locale
+già collegato a un repository remoto.
+
+2) Verifica che inizialmente
+locale e remoto siano allineati.
+
+--------------------------------------------------
+PARTE 1 — MODIFICA SOLO LOCALE
+
+3) Effettua una modifica in un file del progetto.
+
+4) Salva la modifica in una commit,
+ma NON inviarla al repository remoto.
+
+DOMANDA:
+Dove si trova ora questa commit?
+Locale, remoto o entrambi?
+
+--------------------------------------------------
+PARTE 2 — CONFRONTO LOCALE → REMOTO
+
+5) Confronta lo stato del branch locale
+con il branch remoto.
+
+DOMANDA:
+Cosa significa che il branch locale
+è “avanti” rispetto al remoto?
+
+--------------------------------------------------
+PARTE 3 — MODIFICA SOLO REMOTA
+
+6) Simula una modifica effettuata
+da un altro sviluppatore sul remoto.
+
+7) Aggiorna le informazioni sullo stato del remoto
+SENZA modificare i file locali.
+
+DOMANDA:
+I file locali cambiano?
+Perché?
+
+--------------------------------------------------
+PARTE 4 — CONFRONTO REMOTO → LOCALE
+
+8) Confronta di nuovo lo stato locale
+con quello remoto.
+
+DOMANDA:
+Cosa significa che il branch locale
+è “indietro” rispetto al remoto?
+
+--------------------------------------------------
+PARTE 5 — REPOSITORY SINCRONIZZATO
+
+9) Porta il repository locale
+allo stesso stato del remoto.
+
+10) Verifica che non esistano più differenze.
+
+DOMANDA:
+Quando possiamo dire che un repository
+è sincronizzato?
+
+--------------------------------------------------
+RIEPILOGO FINALE
+
+Completa:
+
+- Commit solo in locale → ____________________
+- Commit solo sul remoto → ___________________
+- Locale avanti significa → __________________
+- Locale indietro significa → ________________
+- Repository sincronizzato → ________________

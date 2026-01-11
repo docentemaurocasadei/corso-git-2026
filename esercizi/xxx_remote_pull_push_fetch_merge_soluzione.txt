@@ -1,0 +1,92 @@
+SOLUZIONI — ESERCIZIO GIT
+REMOTE / PUSH / FETCH / PULL / MERGE
+
+--------------------------------------------------
+SCENARIO INIZIALE
+
+Collegare il repository remoto:
+git remote add origin URL
+
+Verificare il collegamento:
+git remote -v
+
+--------------------------------------------------
+PARTE 1 — PRIMO PUSH
+
+Comando:
+git push -u origin main
+(o master)
+
+Effetto:
+- il repository remoto riceve tutte le commit locali
+- viene creato il branch remoto
+- viene impostato l’upstream
+
+--------------------------------------------------
+PARTE 2 — MODIFICA LOCALE E PUSH
+
+Comandi:
+git add <file>
+git commit -m "nuova modifica"
+git push
+
+Effetto:
+- il remoto viene aggiornato
+- le commit diventano pubbliche
+
+--------------------------------------------------
+PARTE 3 — MODIFICA SUL REMOTO
+
+Aggiornare solo le informazioni:
+git fetch
+
+Effetto:
+- Git aggiorna i riferimenti remoti
+- i file locali NON cambiano
+
+--------------------------------------------------
+PARTE 4 — FETCH VS PULL
+
+Fetch:
+git fetch
+→ scarica le commit
+→ NON le unisce
+→ NON modifica i file locali
+
+Pull:
+git pull
+→ fetch + merge
+→ aggiorna branch locale
+→ può creare conflitti
+
+--------------------------------------------------
+PARTE 5 — MERGE MANUALE
+
+Unire le modifiche:
+git merge origin/main
+(o origin/master)
+
+Effetto:
+- le modifiche remote vengono integrate
+- può essere creato un merge commit
+- possono nascere conflitti se gli stessi file
+  sono stati modificati
+
+--------------------------------------------------
+RIEPILOGO FINALE
+
+Azione                             | Comando
+----------------------------------|--------------------
+Inviare commit al remoto           | git push
+Scaricare info dal remoto          | git fetch
+Scaricare e unire                  | git pull
+Unire due branch                   | git merge
+Fetch modifica i file locali?      | NO
+
+--------------------------------------------------
+REGOLA DIDATTICA
+
+Push manda il lavoro agli altri.
+Fetch guarda cosa hanno fatto gli altri.
+Pull prende e unisce automaticamente.
+Merge unisce storie diverse.

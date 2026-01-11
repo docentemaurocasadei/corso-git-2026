@@ -1,0 +1,59 @@
+SOLUZIONI — ESERCIZIO GIT
+RESET / RESTORE
+
+--------------------------------------------------
+PARTE 1 — ANNULLARE UNA COMMIT LOCALE
+
+Comando corretto:
+git reset --soft HEAD~1
+
+Motivo:
+- la commit non è pushata
+- HEAD torna indietro
+- le modifiche restano disponibili
+
+--------------------------------------------------
+PARTE 2 — POSIZIONE DELLE MODIFICHE
+
+Dopo reset --soft:
+- le modifiche si trovano nello STAGING AREA
+- il file risulta staged
+
+--------------------------------------------------
+PARTE 3 — RIPRISTINARE UN FILE
+
+Comando corretto:
+git restore app.txt
+
+Effetto:
+- il file torna allo stato dell’ultima commit
+- le modifiche locali vengono annullate
+- la cronologia non cambia
+
+--------------------------------------------------
+PARTE 4 — ANNULLARE SOLO LO STAGE
+
+Comando corretto:
+git reset --mixed HEAD
+(oppure semplicemente: git reset HEAD)
+
+Effetto:
+- lo stage viene svuotato
+- il file resta modificato
+- le modifiche tornano nella working directory
+
+--------------------------------------------------
+RIEPILOGO FINALE
+
+Situazione                                   | Risposta
+--------------------------------------------|---------------------
+Annullare commit locale mantenendo i file    | git reset --soft
+Rimuovere un file dallo stage                | git reset --mixed
+Ripristinare un file                         | git restore
+Distruggere tutto                            | git reset --hard
+
+--------------------------------------------------
+REGOLA DIDATTICA
+
+Reset lavora su STORIA e STAGE.
+Restore lavora solo sui FILE.
