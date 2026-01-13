@@ -1,0 +1,44 @@
+# Esercizio Git – Fork e Pull Request
+
+## Obiettivo
+Imparare a collaborare su GitHub utilizzando:
+- Fork
+- Branch
+- Commit
+- Pull Request
+
+---
+
+## Repository di partenza
+https://github.com/docentemaurocasadei/git-to-fork
+
+---
+
+## Istruzioni
+
+1. Fai il **fork** del repository del docente nel tuo account GitHub.
+
+2. Clona **il tuo fork** in locale.
+
+3. Crea un **branch personale** chiamato:
+   esercizio-nomecognome
+
+4. Nel progetto crea un file chiamato:
+   file-nomecognome.txt
+
+5. Inserisci nel file:
+   - Nome e Cognome
+   - Data
+   - Corso Git
+
+6. Fai **commit** delle modifiche con un messaggio significativo.
+
+7. Fai **push** del branch sul tuo fork.
+
+8. Apri una **Pull Request** verso il repository del docente.
+
+---
+
+## Consegna
+L’esercizio è considerato completato quando la Pull Request è visibile
+nel repository del docente.

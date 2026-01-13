@@ -1,0 +1,52 @@
+# Soluzione – Esercizio Fork e Pull Request
+
+## 1. Fork del repository
+Lo studente clicca su “Fork” nel repository:
+https://github.com/docentemaurocasadei/git-to-fork
+
+---
+
+## 2. Clone del fork
+git clone https://github.com/<username>/git-to-fork.git
+cd git-to-fork
+
+---
+
+## 3. Creazione branch personale
+git switch -c esercizio-nomecognome
+
+---
+
+## 4. Creazione file
+file-nomecognome.txt
+Contenuto:
+Nome Cognome
+Data
+Corso Git
+
+---
+
+## 5. Commit
+git add .
+git commit -m "Aggiunto file nomecognome"
+
+---
+
+## 6. Push
+git push origin esercizio-nomecognome
+
+---
+
+## 7. Pull Request (da GitHub)
+- Base repository: docentemaurocasadei/git-to-fork
+- Base branch: main
+- Compare repository: <username>/git-to-fork
+- Compare branch: esercizio-nomecognome
+
+---
+
+## Risultato atteso
+- Fork corretto
+- Branch personale
+- Commit presente
+- Pull Request aperta correttamente
