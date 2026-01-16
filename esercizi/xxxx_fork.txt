@@ -1,0 +1,54 @@
+ESERCIZIO GIT – Collaborazione tramite FORK
+🎯 Obiettivo
+Simulare un flusso di lavoro aziendale / open-source in cui:
+il Lead mantiene il repository ufficiale
+i developer non hanno accesso diretto
+le modifiche arrivano tramite fork + pull request
+
+👥 Ruoli
+Studente A → Repository Owner / Lead
+Studente B → External Developer
+
+🧩 Scenario
+L’azienda rilascia un progetto pubblico chiamato:
+azienda-git-project
+I contributi esterni non possono fare push diretto, ma devono usare un fork.
+
+🔹 FASE 1 – Repository ufficiale (Studente A)
+Creare un repository GitHub chiamato azienda-git-project
+Aggiungere i file:
+README.md
+azienda.txt
+Inserire un contenuto iniziale
+Effettuare il commit e push su main
+
+🔹 FASE 2 – Fork del repository (Studente B)
+Aprire il repository del Lead su GitHub
+Creare un Fork sul proprio account
+Clonare il fork in locale
+
+🔹 FASE 3 – Sviluppo su fork (Studente B)
+Creare un branch chiamato feature-miglioramenti
+Modificare:
+README.md (aggiungere una sezione)
+azienda.txt (aggiungere una riga)
+Verificare lo stato
+Committare le modifiche
+Push sul proprio fork
+
+🔹 FASE 4 – Pull Request dal fork
+Aprire una Pull Request:
+base repository: repo del Lead
+base branch: main
+compare: feature-miglioramenti del fork
+Descrivere chiaramente le modifiche
+
+🔹 FASE 5 – Revisione e merge (Studente A)
+Analizzare la Pull Request
+Approvare le modifiche
+Eseguire il merge su main
+Eliminare il branch del contributor (se richiesto)
+
+🔹 FASE 6 – Aggiornamento fork (Studente B)
+Allineare il fork con il repository ufficiale
+Verificare che il fork sia aggiornato

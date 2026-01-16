@@ -1,0 +1,73 @@
+ESERCIZIO GIT – Soluzione con FORK
+🔹 FASE 1 – Repository ufficiale (Studente A)
+git init
+echo "# Azienda Git Project" > README.md
+echo "Documento aziendale iniziale" > azienda.txt
+git add .
+git commit -m "Initial commit progetto aziendale"
+git branch -M main
+git push origin main
+
+🔹 FASE 2 – Fork (Studente B)
+
+Su GitHub:
+
+Pulsante Fork
+
+git clone https://github.com/STUDENTE_B/azienda-git-project.git
+cd azienda-git-project
+
+🔹 FASE 3 – Branch e modifiche (Studente B)
+git checkout -b feature-miglioramenti
+
+
+Modifiche ai file, poi:
+
+git status
+git add .
+git commit -m "Migliorata documentazione e file aziendale"
+git push origin feature-miglioramenti
+
+🔹 FASE 4 – Pull Request
+
+Su GitHub:
+
+New Pull Request
+
+base repo: STUDENTE_A/azienda-git-project
+
+base branch: main
+
+compare: STUDENTE_B:feature-miglioramenti
+
+🔹 FASE 5 – Merge (Studente A)
+
+Su GitHub:
+
+Review → Approve
+
+Merge Pull Request
+
+Aggiornamento locale:
+
+git pull origin main
+
+🔹 FASE 6 – Allineamento fork (Studente B)
+Collegare upstream
+git remote add upstream https://github.com/STUDENTE_A/azienda-git-project.git
+git remote -v
+
+Aggiornare fork
+git checkout main
+git pull upstream main
+git push origin main
+
+🎓 Nota didattica (molto importante)
+
+Questo è il workflow più usato:
+
+progetti open source
+
+aziende con repo protetti
+
+audit e controllo qualità
