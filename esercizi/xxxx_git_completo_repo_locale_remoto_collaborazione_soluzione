@@ -1,0 +1,117 @@
+FASE 1 – Repository locale (Studente A)
+mkdir azienda-git-project
+cd azienda-git-project
+git init
+
+echo "# Azienda Git Project" > README.md
+echo "Documento aziendale iniziale" > azienda.txt
+
+git status
+git add .
+git commit -m "Initial commit: struttura progetto"
+git log
+
+🔹 FASE 2 – Repository remoto
+git remote add origin https://github.com/USERNAME/azienda-git-project.git
+git remote -v
+git branch -M main
+git push -u origin main
+
+🔹 FASE 3 – Collaboratori
+
+GitHub → Repository → Settings
+
+Collaborators
+
+Aggiungere lo Studente B
+
+🔹 FASE 4 – Branch (Studente A)
+git checkout -b feature-documentazione
+
+
+Modifica README.md, poi:
+
+git status
+git add README.md
+git commit -m "Aggiunta documentazione progetto"
+git push -u origin feature-documentazione
+
+🔹 FASE 5 – Studente B
+git clone https://github.com/USERNAME/azienda-git-project.git
+cd azienda-git-project
+git branch -a
+git checkout feature-documentazione
+
+
+Modifica azienda.txt, poi:
+
+git add azienda.txt
+git commit -m "Aggiornato documento aziendale"
+git push
+
+🔹 FASE 6 – Allineamento (Studente A)
+git checkout feature-documentazione
+git pull
+git log --oneline --graph
+git status
+
+FASE 7 – Pull Request / Merge
+Studente B – Push già effettuato
+git push origin feature-documentazione
+
+Pull Request (GitHub)
+
+base: main
+
+compare: feature-documentazione
+
+Studente A – Merge
+
+Su GitHub:
+
+Review → Approve
+
+Merge Pull Request
+
+Delete branch
+
+Aggiornamento locale:
+
+git checkout main
+git pull
+
+🔹 FASE 8 – Conflitto
+Studente A (main)
+git checkout main
+echo "Versione aggiornata dal Lead" > azienda.txt
+git add azienda.txt
+git commit -m "Aggiornamento azienda.txt da main"
+git push
+
+Studente B (branch feature)
+git checkout feature-documentazione
+echo "Versione modificata dal Developer" > azienda.txt
+git add azienda.txt
+git commit -m "Modifica azienda.txt in feature"
+
+
+Tentativo di aggiornamento:
+
+git pull origin main
+
+🔹 FASE 9 – Risoluzione del conflitto
+File in conflitto (azienda.txt)
+<<<<<<< HEAD
+Versione modificata dal Developer
+=======
+Versione aggiornata dal Lead
+>>>>>>> main
+
+Risoluzione (esempio)
+Versione aggiornata dal Lead
+Versione modificata dal Developer
+
+Completamento merge
+git add azienda.txt
+git commit -m "Risolto conflitto su azienda.txt"
+git push

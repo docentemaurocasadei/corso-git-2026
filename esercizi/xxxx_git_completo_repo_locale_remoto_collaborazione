@@ -1,0 +1,107 @@
+FILE 1 – CONSEGNA
+ESERCIZIO GIT – Simulazione lavoro aziendale in coppia
+🎯 Obiettivo
+
+Simulare un flusso di lavoro aziendale utilizzando Git e GitHub, lavorando in coppia, con repository locale e remoto, branch di sviluppo e collaborazione.
+
+👥 Ruoli
+
+Studente A → Lead Developer
+
+Studente B → Developer
+
+🧩 Scenario
+L’azienda ha avviato un nuovo progetto chiamato:
+azienda-git-project
+Il progetto contiene file di testo che rappresentano documentazione e attività aziendali.
+
+-----------
+🔹 FASE 1 – Repository locale (Studente A)
+Creare una cartella di progetto chiamata azienda-git-project
+Inizializzare un repository Git locale
+Creare i seguenti file:
+README.md
+azienda.txt
+Inserire un contenuto iniziale a scelta
+Verificare lo stato del repository
+Aggiungere i file allo staging
+Eseguire il commit iniziale
+Visualizzare la cronologia dei commit
+
+🔹 FASE 2 – Repository remoto (Studente A)
+Creare un repository remoto su GitHub con lo stesso nome
+Collegare il repository locale a quello remoto
+Verificare il collegamento
+Inviare i commit al repository remoto
+
+🔹 FASE 3 – Collaborazione
+Assegnare allo Studente B i diritti di collaborazione sul repository GitHub
+
+🔹 FASE 4 – Sviluppo con branch (Studente A)
+Creare un nuovo branch chiamato feature-documentazione
+Modificare il file README.md aggiungendo una sezione di documentazione
+Verificare lo stato
+Committare le modifiche
+Inviare il branch al repository remoto
+
+🔹 FASE 5 – Lavoro del collega (Studente B)
+Clonare il repository remoto in locale
+Visualizzare i branch disponibili
+Passare al branch feature-documentazione
+Modificare il file azienda.txt
+Aggiungere e committare le modifiche
+Inviare il commit al repository remoto
+
+🔹 FASE 6 – Allineamento finale (Studente A)
+Aggiornare il repository locale con le modifiche del collega
+Verificare lo stato e la cronologia
+FASE 7 – Pull Request e Merge (workflow aziendale)
+Scenario
+Lo Studente B ha terminato il lavoro sul branch feature-documentazione.
+In azienda non si fa merge diretto su main, ma si passa da una Pull Request (PR).
+
+27️⃣ Creazione Pull Request (Studente B)
+Accedere al repository su GitHub
+Aprire una Pull Request:
+base: main
+compare: feature-documentazione
+Inserire una descrizione chiara delle modifiche
+
+28️⃣ Revisione e merge (Studente A – Lead)
+Analizzare i file modificati
+Approvare la Pull Request
+Effettuare il merge su main
+Eliminare il branch feature-documentazione dal remoto
+
+🔹 FASE 8 – Introduzione del conflitto
+Scenario
+Entrambi gli studenti modificano la stessa riga dello stesso file senza coordinarsi.
+
+29️⃣ Modifica parallela (Studente A)
+Sul branch main:
+Modificare la prima riga di azienda.txt
+Commit e push
+
+30️⃣ Modifica parallela (Studente B)
+Sul branch feature-documentazione:
+Modificare la stessa riga di azienda.txt in modo diverso
+Commit (senza fare pull)
+
+31️⃣ Tentativo di merge con conflitto
+Lo Studente B tenta di aggiornarsi con main
+🔹 FASE 9 – Risoluzione del conflitto
+
+32️⃣ Individuare il conflitto
+Git segnala un merge conflict
+Il file azienda.txt risulta in conflitto
+
+33️⃣ Risoluzione manuale
+Aprire il file
+Individuare i marker di conflitto
+Decidere quale versione mantenere (o combinarle)
+Salvare il file
+
+34️⃣ Completare il merge
+Aggiungere il file risolto
+Committare la risoluzione
+Push finale
